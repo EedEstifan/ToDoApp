@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>ToDoApp</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header -->
+        <div class="header">
+            ToDoApp
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="nav">
+            <asp:Menu ID="MainMenu" runat="server" Orientation="Horizontal" OnMenuItemClick="MainMenu_MenuItemClick">
+                <Items>
+                    <asp:MenuItem Text="Login" Value="Login" />
+                    <asp:MenuItem Text="Projects" Value="Projects" />
+                </Items>
+            </asp:Menu>
+        </div>
+
+        <!-- Page Content -->
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 <h2>Welcome to the ToDoApp</h2>
+    <p>This is the home page content.</p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

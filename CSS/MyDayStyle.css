@@ -1,0 +1,27 @@
+﻿body {
+    padding:0px;
+    margin:0px;
+}
+
+#MyDayControl{
+    background-color:red;
+}
+
+#MyDayTasks{
+    display:flex;
+}
+
+#Tasks{
+    width:50%;
+    background-color:black;
+}
+
+#TaskDetails {
+    width: 20%;
+    background-color: green;
+}
+
+#DailyJournal {
+    width: 30%;
+    background-color: blue;
+}

@@ -1,0 +1,188 @@
+﻿body {
+    padding: 0px;
+    margin-top: 0px;
+    background-color: #f4f6f8; 
+}
+
+.projectsExplorer {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+/* Left side: grid of projects */
+#projectsContainer {
+    width: 50%;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Each project item */
+.project-item {
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow:hidden;
+}
+
+    .project-item:hover {
+        transform: scale(1.1);
+        background-color: #e6f3ff; 
+    }
+
+.project-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Project name */
+.project-label {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #1f2d3d;
+    font-weight: bold;
+}
+
+#lblProjectHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f2d3d; /* Dark text color */
+    margin-bottom: 15px; /* Add spacing between header and content */
+    text-align: center; /* Center the header text */
+}
+
+/* Right panel fixed full height */
+#projectDetails {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #f9fbfd;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+/* Remove text decoration for project labels */
+.project-item a {
+    text-decoration: none;
+}
+
+.project-item .project-label {
+    text-decoration: none;
+}
+
+
+#projectsControl {
+    width: 100%;
+    background-color: #313131;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+}
+
+
+#txtNewProjectName {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+    #txtNewProjectName:focus {
+        border-color: #4CAF50;
+    }
+
+#btnNewProject {
+    font-size: 14px;
+    padding: 10px 16px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+    #btnNewProject :hover {
+        background-color: #45a049;
+        transform: scale(1.03);
+    }
+
+.btnDetails {
+    font-size: 14px;
+    padding: 10px 16px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: block;
+    width: 100%; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+    .btnDetails:hover {
+        background-color: #45a049;
+        transform: scale(1.03);
+    }
+
+.details-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.detail-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .detail-group label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #444;
+    }
+
+.detail-box {
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .detail-box:focus {
+        border-color: #4CAF50;
+        box-shadow: 0 0 4px #4CAF50;
+    }
+
+
