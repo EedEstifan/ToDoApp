@@ -5,9 +5,18 @@
 <head runat="server">
     <title>Profile Page</title>
     <link href="CSS/ProfileStyle.css" rel="stylesheet" />
+    <link href="CSS/navbar.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="top-navbar">
+            <a href="Projects.aspx">Projects</a>
+            <a href="Profile.aspx">Profile</a>
+            <a href="MyDay.aspx">MyDay</a>
+            <a href="Signin.aspx">Signin</a>
+            <a href="Register.aspx">Register</a>
+        </div>
+
         <div class="profile-container">
             <h2 ID="lblWelcome" runat="server">Your Profile</h2>
             <div class="profile-picture">

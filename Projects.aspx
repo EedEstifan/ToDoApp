@@ -7,20 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
     <link rel="stylesheet" href="CSS/ProjectsStyle.css" />
-    <link href="CSS/navbar.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <%--<div class="top-navbar">
-            <a href="Projects.aspx">Projects</a>
-            <a href="Profile.aspx">Profile</a>
-            <a href="MyDay.aspx">MyDay</a>
-            <a href="Signin.aspx">Signin</a>
-            <a href="Register.aspx">Register</a>
-        </div>--%>
         <div id="projectsControl">
             <asp:Button ID="btnNewProject" CssClass="btn" Text="Create New Project" runat="server" OnClick="btnNewProject_Click" />
             <asp:TextBox ID="txtNewProjectName" runat="server"></asp:TextBox>
+            <asp:Button ID="btnProfile" CssClass="btn" Text="Go To Profile" runat="server" OnClick="btnProfile_Click" />
+
         </div>
 
         <div class="projectsExplorer">

@@ -114,7 +114,7 @@
         border-color: #4CAF50;
     }
 
-#btnNewProject {
+.btn {
     font-size: 14px;
     padding: 10px 16px;
     background-color: navy;
@@ -124,7 +124,7 @@
     cursor: pointer;
     transition: background-color 0.2s, transform 0.1s;
 }
-    #btnNewProject :hover {
+    .btn :hover {
         background-color: #45a049;
         transform: scale(1.03);
     }

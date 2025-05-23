@@ -66,6 +66,12 @@ namespace ToDoApp
                 Page_Load(sender, e);
             }
         }
+        protected void btnProfile_Click(object sender, EventArgs e)
+        {
+            Session["projectId"] = null;
+            Response.Redirect("Profile.aspx");
+        }
+        
 
         protected void btnOpenProject_Click(object sender, EventArgs e)
         {
