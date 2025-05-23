@@ -33,22 +33,31 @@ namespace ToDoApp
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblWelcome;
 
         /// <summary>
-        /// profileImage control.
+        /// ProfileImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image profileImage;
+        protected global::System.Web.UI.WebControls.Image ProfileImage;
 
         /// <summary>
-        /// imgUpload control.
+        /// fuProfilePicture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imgUpload;
+        protected global::System.Web.UI.WebControls.FileUpload fuProfilePicture;
+
+        /// <summary>
+        /// btnUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUpload;
 
         /// <summary>
         /// lblFirstName control.
@@ -60,6 +69,15 @@ namespace ToDoApp
         protected global::System.Web.UI.WebControls.Label lblFirstName;
 
         /// <summary>
+        /// txtFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFirstName;
+
+        /// <summary>
         /// btnEditFirstName control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace ToDoApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditFirstName;
+
+        /// <summary>
+        /// btnSaveFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveFirstName;
 
         /// <summary>
         /// lblLastName control.
@@ -78,6 +105,15 @@ namespace ToDoApp
         protected global::System.Web.UI.WebControls.Label lblLastName;
 
         /// <summary>
+        /// txtLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLastName;
+
+        /// <summary>
         /// btnEditLastName control.
         /// </summary>
         /// <remarks>
@@ -85,6 +121,15 @@ namespace ToDoApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditLastName;
+
+        /// <summary>
+        /// btnSaveLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveLastName;
 
         /// <summary>
         /// lblGender control.
@@ -96,6 +141,15 @@ namespace ToDoApp
         protected global::System.Web.UI.WebControls.Label lblGender;
 
         /// <summary>
+        /// ddlGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGender;
+
+        /// <summary>
         /// btnEditGender control.
         /// </summary>
         /// <remarks>
@@ -103,6 +157,15 @@ namespace ToDoApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditGender;
+
+        /// <summary>
+        /// btnSaveGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveGender;
 
         /// <summary>
         /// lblEmail control.
@@ -114,15 +177,6 @@ namespace ToDoApp
         protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// btnEditEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditEmail;
-
-        /// <summary>
         /// lblPassword control.
         /// </summary>
         /// <remarks>
@@ -132,6 +186,15 @@ namespace ToDoApp
         protected global::System.Web.UI.WebControls.Label lblPassword;
 
         /// <summary>
+        /// txtPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+
+        /// <summary>
         /// btnEditPassword control.
         /// </summary>
         /// <remarks>
@@ -139,5 +202,41 @@ namespace ToDoApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditPassword;
+
+        /// <summary>
+        /// btnSavePassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSavePassword;
+
+        /// <summary>
+        /// lblProjectsDone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProjectsDone;
+
+        /// <summary>
+        /// lblIsAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIsAdmin;
+
+        /// <summary>
+        /// btnSignOut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSignOut;
     }
 }

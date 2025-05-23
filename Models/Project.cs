@@ -76,6 +76,7 @@ namespace ToDoApp.Models
             }
             return count;
         }
+
         public void loadProjectTasks()
         {
             string qry = "SELECT * FROM TaskTbl WHERE projectId = @projectId;";

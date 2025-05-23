@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.UI.WebControls;
 using ToDoApp.App_Code;
@@ -54,7 +55,7 @@ namespace ToDoApp.Models
             this.gender = ds.Tables[0].Rows[0]["gender"].ToString();
             this.email = ds.Tables[0].Rows[0]["email"].ToString();
             this.password = ds.Tables[0].Rows[0]["password"].ToString();
-            this.numOfProjects = Convert.ToInt32(ds.Tables[0].Rows[0]["numOfProjects"]);  
+            this.numOfProjects = 0;
             this.projects = new List<Project>();  
             this.imgURL = ds.Tables[0].Rows[0]["imgURL"].ToString();
             this.isAdmin = Convert.ToBoolean(ds.Tables[0].Rows[0]["isAdmin"]);
@@ -101,10 +102,10 @@ namespace ToDoApp.Models
         public bool insertUser()
         {
             if (isExists() == true) return false;
-            string qry = "INSERT INTO[UserTbl](email, password, gender, firstName, lastName, numOfProjects, isAdmin, imgURL) ";
-            qry += "VALUES (@Email, @Password, @Gender, @FirstName, @LastName, @NumOfProjects, @IsAdmin, @ImgURL)";
-            string[] Parameters = { "@Email", "@Password", "@Gender", "@FirstName", "@LastName", "@NumOfProjects", "@IsAdmin", "@ImgURL "};
-            object[] Values = { email, password, gender, firstName,lastName,numOfProjects,isAdmin,imgURL};
+            string qry = "INSERT INTO[UserTbl](email, password, gender, firstName, lastName,  isAdmin, imgURL) ";
+            qry += "VALUES (@Email, @Password, @Gender, @FirstName, @LastName,  @IsAdmin, @ImgURL)";
+            string[] Parameters = { "@Email", "@Password", "@Gender", "@FirstName", "@LastName",  "@IsAdmin", "@ImgURL "};
+            object[] Values = { email, password, gender, firstName,lastName,isAdmin,imgURL};
             MyDB.updateTable(qry, Parameters, Values);
             return true;
         }
@@ -149,7 +150,23 @@ namespace ToDoApp.Models
             }
         }
 
-        
+        public int numOfDoneProjects()
+        {
+            int count = 0;
+            for (int i = 0; i < numOfProjects; i++)
+            {
+                if (projects[i].status == ToDoItemStatus.Done) count++;
+            }
+            return count;
+        }
 
+        public void UpdateUser()
+        {
+            string qry = "UPDATE UserTbl SET firstName = @FirstName, lastName = @LastName, gender = @Gender, password = @Password, imgURL = @ImgURL WHERE id = @UserID";
+            string[] parameters = { "@FirstName", "@LastName", "@Gender", "@Password", "@ImgURL", "@UserID" };
+            object[] values = { firstName, lastName, gender, password, imgURL, id };
+            MyDB.updateTable(qry, parameters, values);
+        }
     }
+
 }

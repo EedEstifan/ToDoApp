@@ -26,14 +26,14 @@ namespace ToDoApp
             if (user.isValidEmailPassword() == true)
             {
                 Session["userId"] = user.getUserIdByEmailPassword();
-                Response.Redirect("Projects.aspx");
+                Response.Redirect("Profile.aspx");
             }
             else
             {
                 lblMessage.Text = "Email or pasword is incrrect";
             }
         }
-        //database things i will comeback to it
+
         private bool ValidateUser(string email, string password)
         {
             bool isValid = false;
