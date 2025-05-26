@@ -9,15 +9,25 @@ using ToDoApp.Models;
 
 namespace ToDoApp
 {
+
     public partial class ProjectManager : System.Web.UI.Page
     {
         Project project;
         private void bindRepeater()
         {
+            if (Session["TaskMode"] == null) return;
             project = new Project(Convert.ToInt32(Session["projectId"].ToString()));
-            if(Convert.ToBoolean(Session["isSort"])==true)project.SortTasksByPriority();
-            Repeater1.DataSource = project.tasks;
-            Repeater1.DataBind();
+            if (Convert.ToBoolean(Session["isSort"]) == true) project.SortTasksByPriority();
+            if ((TaskMode)Session["TaskMode"] == TaskMode.All)
+            {
+                Repeater1.DataSource = project.tasks;
+                Repeater1.DataBind();
+            }
+            else 
+            {
+                Repeater1.DataSource = project.getTaskByMode((TaskMode)Session["TaskMode"]);
+                Repeater1.DataBind();
+            }
         }
 
         
@@ -27,7 +37,7 @@ namespace ToDoApp
             txtTaskName.Text = selectedTask.name;
             txtTaskDisc.Text = selectedTask.description;
             txtTaskDeadline.Text = selectedTask.deadline.ToString("yyyy-MM-dd");
-            txtTaskDuedate.Text = selectedTask.deadline.ToString("yyyy-MM-dd");
+            txtTaskDuedate.Text = selectedTask.dueDate.ToString("yyyy-MM-dd");
             ddlTaskPriority.SelectedValue = selectedTask.priority.ToString();
             ddlTaskStatus.SelectedValue = selectedTask.status.ToString();
         }
@@ -43,6 +53,7 @@ namespace ToDoApp
                     {
                         Session["isSort"] = false;
                         Session["taskId"] = null;
+                        Session["TaskMode"] = TaskMode.All;
                         Repeater1.DataSource = project.tasks;
                         Repeater1.DataBind();
                     }
@@ -127,6 +138,35 @@ namespace ToDoApp
             bindRepeater();
 
         }
+
+        private string GetTaskModeText(TaskMode mode)//helper for next finc
+        {
+            switch (mode)
+            {
+                case TaskMode.All:
+                    return "All Tasks";
+                case TaskMode.DueToday:
+                    return "Due Today";
+                case TaskMode.Overdue:
+                    return "Overdue";
+                case TaskMode.DueFuture:
+                    return "Future Tasks";
+                default:
+                    return "All Tasks";
+            }
+        }
+
+        protected void btnTaskMode_Click(object sender, EventArgs e)
+        {
+            if (Session["TaskMode"] == null) return;
+            TaskMode current = (TaskMode)Session["TaskMode"];
+            TaskMode next = (TaskMode)(((int)current + 1) % 4);
+            Session["TaskMode"] = next;
+            btnTaskMode.Text = GetTaskModeText(next+1);
+
+            bindRepeater();
+        }
+
         
     }
 

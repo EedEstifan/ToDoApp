@@ -167,6 +167,7 @@ namespace ToDoApp.Models
             object[] values = { firstName, lastName, gender, password, imgURL, id };
             MyDB.updateTable(qry, parameters, values);
         }
+
     }
 
 }

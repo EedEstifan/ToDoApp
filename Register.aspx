@@ -21,7 +21,7 @@
 
             <label>Gender:</label>
             <div class="gender-group">
-                <asp:RadioButton ID="rbMale" runat="server" GroupName="Gender" Text="Male" />
+                <asp:RadioButton ID="rbMale" runat="server" GroupName="Gender" Text="Male" Checked="true"  />
                 <asp:RadioButton ID="rbFemale" runat="server" GroupName="Gender" Text="Female" />
             </div>
 

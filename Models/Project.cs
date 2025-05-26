@@ -7,6 +7,7 @@ using System.Web;
 using ToDoApp.App_Code;
 namespace ToDoApp.Models
 {
+
     public class Project : ToDoItem
     {
         
@@ -19,6 +20,8 @@ namespace ToDoApp.Models
             tasks = new List<Task>();
             numOfTasks = 0;
         }
+
+
 
         public Project(int id):base(id)
         {
@@ -97,6 +100,21 @@ namespace ToDoApp.Models
         public void SortTasksByPriority()
         {
             tasks.Sort((a, b) => b.priority.CompareTo(a.priority));
+        }
+
+        public List<Task> getTaskByMode(TaskMode taskMode)
+        {
+            List<Task> filteredTasks = new List<Task>();
+
+            foreach (Task task in tasks)
+            {
+                if (task.getTaskMode() == taskMode)
+                {
+                    filteredTasks.Add(task);
+                }
+            }
+
+            return filteredTasks;
         }
     }
 }

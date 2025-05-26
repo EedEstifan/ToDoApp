@@ -13,6 +13,7 @@
         <asp:Button ID="btnNewTask" Text="Add New Task" runat="server" OnClick="btnNewTask_Click" /><link href="CSS/CalendarViewStyle.css" rel="stylesheet" />
         <asp:TextBox ID="txtNewTaskName" runat="server"></asp:TextBox>
         <asp:Button ID="btnSort" Text="Sort" runat="server" OnClick="btnSort_Click" />
+        <asp:Button ID="btnTaskMode" Text="Due Today" runat="server" OnClick="btnTaskMode_Click" />
     </div>
 
         <div class="projectExplorer">
@@ -52,7 +53,7 @@
                 </div>
 
                 <div class="detail-group">
-                    <label for="txtTaskDuedate">Deadline</label>
+                    <label for="txtTaskDuedate">DueDate</label>
                     <asp:TextBox ID="txtTaskDuedate" runat="server" CssClass="detail-box" TextMode="Date"></asp:TextBox>
                 </div>
 

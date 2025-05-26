@@ -71,7 +71,13 @@ namespace ToDoApp
             Session["projectId"] = null;
             Response.Redirect("Profile.aspx");
         }
+        protected void btnJournal_Click(object sender, EventArgs e)
+        {
+            Session["projectId"] = null;
+            Response.Redirect("Journals.aspx");
+        }
         
+
 
         protected void btnOpenProject_Click(object sender, EventArgs e)
         {

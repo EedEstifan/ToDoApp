@@ -14,8 +14,8 @@
             <asp:Button ID="btnNewProject" CssClass="btn" Text="Create New Project" runat="server" OnClick="btnNewProject_Click" />
             <asp:TextBox ID="txtNewProjectName" runat="server"></asp:TextBox>
             <asp:Button ID="btnProfile" CssClass="btn" Text="Go To Profile" runat="server" OnClick="btnProfile_Click" />
-
-        </div>
+            <asp:Button ID="btnJournal" CssClass="btn" Text="Go To Journal" runat="server" OnClick="btnJournal_Click" />
+        </div >
 
         <div class="projectsExplorer">
             

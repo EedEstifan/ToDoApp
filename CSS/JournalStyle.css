@@ -1,0 +1,155 @@
+﻿/* Enhanced Modern JournalStyle.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.journal-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+    .journal-container:hover {
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.journal-panel {
+    margin-top: 20px;
+    padding: 25px;
+    background: #f7f9fb;
+    border: 1px solid #dde1e4;
+    border-radius: 14px;
+}
+
+.field-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.input,
+.textarea,
+.date-picker {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+    
+
+.textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-secondary:hover {
+        background-color: #7f8c8d;
+    }
+
+.entry {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 5px solid #3498db;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+    .entry:hover {
+        transform: scale(1.01);
+    }
+
+.entry-header {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.mood {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-left: 5px;
+}
+
+.entry-content {
+    color: #34495e;
+    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.message-label {
+    display: block;
+    margin: 20px 0 10px;
+    padding: 12px 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.date-picker {
+    background-color: #fefefe;
+}

@@ -5,6 +5,14 @@ using System.Web;
 
 namespace ToDoApp.Models
 {
+    public enum TaskMode
+    {
+        All,
+        DueToday,
+        Overdue,
+        DueFuture
+    }
+
     public class Task : ToDoItem
     {
         public DateTime dueDate { get; set; }
@@ -14,6 +22,16 @@ namespace ToDoApp.Models
             : base(id, name, status, description, deadline, priority) {
             this.dueDate = dueDate == default ? DateTime.Now : dueDate; // If no due date, use current date
             this.deadline = deadline == default ? DateTime.Now.AddDays(7) : deadline; // If no deadline, use current date + 7 days
+        }
+
+        public TaskMode getTaskMode()
+        {
+            if (dueDate.Date == DateTime.Today)
+                return TaskMode.DueToday;
+            else if (dueDate.Date < DateTime.Today)
+                return TaskMode.Overdue;
+            else 
+                return TaskMode.DueFuture;
         }
 
     }

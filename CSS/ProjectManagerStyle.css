@@ -1,12 +1,20 @@
-﻿/* Basic reset and layout */
-body {
+﻿﻿ /* Basic reset and layout */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
     font-family: Arial, sans-serif;
     background-color: #f7f9fc;
 }
 
 /* Top bar for project controls */
 #ProjectControls {
+    margin: 0;
     width: 100%;
     background-color: #313131;
     padding: 20px;
@@ -29,7 +37,7 @@ body {
         border-color: #4CAF50;
     }
 
-#btnNewTask, #btnBack, #btnSort {
+#btnNewTask, #btnBack, #btnSort, #btnTaskMode {
     font-size: 14px;
     padding: 10px 16px;
     background-color: navy;
@@ -173,5 +181,3 @@ body {
         border-color: #4CAF50;
         box-shadow: 0 0 4px #4CAF50;
     }
-
-

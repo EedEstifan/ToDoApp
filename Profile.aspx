@@ -12,7 +12,7 @@
         <div class="top-navbar">
             <a href="Projects.aspx">Projects</a>
             <a href="Profile.aspx">Profile</a>
-            <a href="MyDay.aspx">MyDay</a>
+            <a href="Journals.aspx">Journal</a>
             <a href="Signin.aspx">Signin</a>
             <a href="Register.aspx">Register</a>
         </div>
